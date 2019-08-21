@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Automation.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">Automation.java</span></div><h1>Automation.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+
+
+/**
+ * This class represents Automation.
+ */
+<span class="fc" id="L8">public class Automation {</span>
+  static final int ARGUMENT_LENGTH = 7;
+
+  /**
+   * Takes arguments and generate message with given template and
+   * given customer information to the given output directory.
+   *
+   * @param args arguments given to this Automation.
+   */
+  public static void main(String[] args) {
+<span class="fc" id="L18">    Parser parseCommand = new Parser();</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">    if (args.length != ARGUMENT_LENGTH) {</span>
+<span class="fc" id="L20">      throw new IllegalArgumentException(&quot;too small amount of arguments&quot;);</span>
+    } else {
+<span class="fc" id="L22">      String output = parseCommand.parseCommand(args);</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">      if (!output.equals(&quot;&quot;)) {</span>
+<span class="fc" id="L24">        System.out.println(output);</span>
+<span class="fc" id="L25">        throw new IllegalArgumentException(&quot;wrong format of arguments&quot;);</span>
+      }
+    }
+<span class="fc" id="L28">    Processor.process(parseCommand);</span>
+<span class="fc" id="L29">  }</span>
+
+  /**
+   * Hashcode function for automation. All automation classes should have the same hash code.
+   * @return the hashcode of this automation.
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L37">    return 29;</span>
+  }
+
+  /**
+   * A string representation of the class.
+   * @return a description of automation class.
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L46">    return &quot;Email Automation Application&quot;;</span>
+  }
+
+  /**
+   * A function to determine whether two objects are equal.
+   * @param compare the object to compare
+   * @return boolean true for all new Automation objects, false otherwise.
+   */
+  @Override
+  public boolean equals(Object compare) {
+<span class="fc bfc" id="L56" title="All 2 branches covered.">    if (this == compare) {</span>
+<span class="fc" id="L57">      return true;</span>
+    }
+<span class="pc bpc" id="L59" title="1 of 4 branches missed.">    if (compare == null || getClass() != compare.getClass()) {</span>
+<span class="fc" id="L60">      return false;</span>
+    }
+
+<span class="fc" id="L63">    Automation object = (Automation) compare;</span>
+
+<span class="fc" id="L65">    return this.toString().equals(object.toString());</span>
+  }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

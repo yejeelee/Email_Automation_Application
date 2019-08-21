@@ -1,0 +1,8 @@
+Information about Customer:
+
+Name : [[first_name]] [[last_name]] 
+
+This person’s address: [[address]],  [[city]],  [[county]],  [[state]],  [[zip]]
+
+Email address: [[email]]
+

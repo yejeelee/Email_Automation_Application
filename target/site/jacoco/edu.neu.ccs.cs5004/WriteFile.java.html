@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>WriteFile.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">WriteFile.java</span></div><h1>WriteFile.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * Class WriteFile, which takes a template and a list of customers and replaces the template text
+ * with customer data for each customer.
+ */
+public class WriteFile implements IWriteFile {
+
+  private List&lt;String&gt; template;
+  private List&lt;Customer&gt; customers;
+
+  /**
+   * Constructor for WriteFile.
+   *
+   * @param template the template as a list of strings
+   * @param customers the list of customers
+   */
+<span class="fc" id="L29">  public WriteFile(List&lt;String&gt; template, List&lt;Customer&gt; customers) {</span>
+<span class="fc" id="L30">    this.template = template;</span>
+<span class="fc" id="L31">    this.customers = customers;</span>
+<span class="fc" id="L32">  }</span>
+
+  /**
+   * Gets the Template that was given to write of this WriteFile.
+   *
+   * @return the Template that was given to write of this WriteFile.
+   */
+  public List&lt;String&gt; getTemplate() {
+<span class="fc" id="L40">    return this.template;</span>
+  }
+
+  /**
+   * Gets the list of customers that was given to write of this WriteFile.
+   *
+   * @return the list of customers that was given to write of this WriteFile.
+   */
+  public List&lt;Customer&gt; getCustomers() {
+<span class="fc" id="L49">    return this.customers;</span>
+  }
+
+  /**
+   * Writes a template for all customers in the list of customers.
+   * @param path the filepath to write to
+   * @throws IOException when the filepath is null
+   */
+  @Override
+  public void writeToAllCustomers(String path) throws IOException {
+<span class="fc bfc" id="L59" title="All 2 branches covered.">    for (Customer customer : this.customers) {</span>
+
+      // creating file name for each customer.
+<span class="fc" id="L62">      String fileName = customer.findValueOfAttributes(&quot;first_name&quot;)</span>
+<span class="fc" id="L63">          + customer.findValueOfAttributes(&quot;last_name&quot;) + &quot;.txt&quot;;</span>
+
+      // Getting the full path including given path.
+<span class="fc bfc" id="L66" title="All 2 branches covered.">      if (path != null) {</span>
+<span class="fc" id="L67">        String currentDir = System.getProperty(&quot;user.dir&quot;) + File.separator + path;</span>
+<span class="fc" id="L68">        File directory = new File(currentDir);</span>
+<span class="fc" id="L69">        boolean isExist = directory.exists();</span>
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">        if (!isExist) {</span>
+<span class="nc" id="L71">          isExist = directory.mkdir();</span>
+        }
+<span class="pc bpc" id="L73" title="1 of 2 branches missed.">        if (isExist) {</span>
+<span class="fc" id="L74">          File file = new File(directory + File.separator + fileName);</span>
+<span class="fc" id="L75">          List&lt;String&gt; finalTemplate = writeOnTemplate(customer);</span>
+
+          // send this to output directory here!!!
+<span class="fc" id="L78">          writeToDirectory(file, finalTemplate);</span>
+        }
+<span class="fc" id="L80">      } else {</span>
+<span class="fc" id="L81">        throw new IOException(&quot;Output filepath is null.&quot;);</span>
+      }
+<span class="fc" id="L83">    }</span>
+<span class="fc" id="L84">  }</span>
+
+  /**
+   * Writes the customer data to the specified template.
+   *
+   * @param customer the customer to write to the template
+   * @return the template, with fields replaced with customer data
+   */
+  protected List&lt;String&gt; writeOnTemplate(Customer customer) {
+<span class="fc" id="L93">    List&lt;String&gt; finalTemplate = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L94" title="All 2 branches covered.">    for (String line : this.template) {</span>
+<span class="fc" id="L95">      Pattern pattern = Pattern.compile(&quot;\\[\\[(.*?)\\]\\]&quot;);</span>
+<span class="fc" id="L96">      Matcher matcher = pattern.matcher(line);</span>
+<span class="fc" id="L97">      StringBuffer buffer = new StringBuffer();</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">      while (matcher.find()) {</span>
+<span class="fc" id="L99">        String matching = matcher.group(1);</span>
+<span class="fc" id="L100">        String value = customer.findValueOfAttributes(matching);</span>
+<span class="fc" id="L101">        matcher.appendReplacement(buffer, value);</span>
+<span class="fc" id="L102">      }</span>
+<span class="fc" id="L103">      matcher.appendTail(buffer);</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">      if (buffer.toString().equals(&quot;&quot;)) {</span>
+<span class="fc" id="L105">        finalTemplate.add(line);</span>
+      } else {
+<span class="fc" id="L107">        finalTemplate.add(buffer.toString());</span>
+      }
+<span class="fc" id="L109">    }</span>
+<span class="fc" id="L110">    return finalTemplate;</span>
+  }
+
+  /**
+   * Write template to the given file and to the given directory.
+   * @param file file given to this WriteFile.
+   * @param finalTemplate finishedTemplate given to this WriteFile.
+   */
+  private void writeToDirectory(File file, List&lt;String&gt; finalTemplate) {
+<span class="fc" id="L119">    Writer bufferedWriter = null;</span>
+    try {
+<span class="fc" id="L121">      OutputStream outputStream = new FileOutputStream(file);</span>
+<span class="fc" id="L122">      bufferedWriter = new OutputStreamWriter(outputStream, &quot;UTF-8&quot;);</span>
+
+<span class="fc bfc" id="L124" title="All 2 branches covered.">      for (String line : finalTemplate) {</span>
+<span class="fc" id="L125">        bufferedWriter.write(line);</span>
+<span class="fc" id="L126">        bufferedWriter.write(&quot;\n&quot;);</span>
+
+<span class="fc" id="L128">      }</span>
+<span class="nc" id="L129">    } catch (IOException ioe) {</span>
+<span class="nc" id="L130">      System.out.println(&quot;Something went wrong! : &quot; + ioe.getMessage());</span>
+    } finally {
+<span class="pc bpc" id="L132" title="5 of 6 branches missed.">      if (bufferedWriter != null) {</span>
+        try {
+<span class="pc" id="L134">          bufferedWriter.flush();</span>
+<span class="pc" id="L135">          bufferedWriter.close();</span>
+<span class="nc" id="L136">        } catch (IOException e) {</span>
+<span class="nc" id="L137">          System.out.println(&quot;Failed to close input stream&quot;);</span>
+<span class="pc" id="L138">        }</span>
+      }
+<span class="nc" id="L140">    }</span>
+<span class="fc" id="L141">  }</span>
+
+  /**
+   * Hashcode function for WriteFile.
+   * All automation classes should have the same hash code.
+   * @return the hashcode
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L150">    return 31 * template.hashCode() * customers.hashCode();</span>
+
+  }
+
+  /**
+   * Represents WriteFile as a string.
+   * @return a string representation of the writeFile.
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L160">    StringBuffer buf = new StringBuffer();</span>
+<span class="fc" id="L161">    buf.append(&quot;Write on this template: \n&quot;);</span>
+<span class="fc bfc" id="L162" title="All 2 branches covered.">    for (String line : this.template) {</span>
+<span class="fc" id="L163">      buf.append(line + &quot;\n&quot;);</span>
+<span class="fc" id="L164">    }</span>
+
+<span class="fc" id="L166">    return buf.toString();</span>
+  }
+
+  /**
+   * Compares whether the two objects are equal.
+   * @param compare the object to be compared
+   * @return true if the objects are equal, false otherwise
+   */
+  @Override
+  public boolean equals(Object compare) {
+<span class="fc bfc" id="L176" title="All 2 branches covered.">    if (this == compare) {</span>
+<span class="fc" id="L177">      return true;</span>
+    }
+<span class="pc bpc" id="L179" title="1 of 4 branches missed.">    if (compare == null || getClass() != compare.getClass()) {</span>
+<span class="fc" id="L180">      return false;</span>
+    }
+<span class="fc" id="L182">    WriteFile object = (WriteFile) compare;</span>
+<span class="pc bpc" id="L183" title="1 of 4 branches missed.">    return this.template.equals(object.template) &amp;&amp; this.customers.equals(object.customers);</span>
+  }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>edu.neu.ccs.cs5004</OriginalElement>
+  <nodes>
+    <node x="304.0" y="588.0">edu.neu.ccs.cs5004.ReadTextFile</node>
+    <node x="0.0" y="1026.0">edu.neu.ccs.cs5004.AutomationTest</node>
+    <node x="673.0" y="818.0">edu.neu.ccs.cs5004.ReadCsvFileTest</node>
+    <node x="677.0" y="0.0">edu.neu.ccs.cs5004.ParserTest</node>
+    <node x="0.0" y="818.0">edu.neu.ccs.cs5004.Customer</node>
+    <node x="0.0" y="566.0">edu.neu.ccs.cs5004.ReadCsvFile</node>
+    <node x="340.0" y="818.0">edu.neu.ccs.cs5004.Processor</node>
+    <node x="488.0" y="1026.0">edu.neu.ccs.cs5004.Automation</node>
+    <node x="187.25" y="464.0">edu.neu.ccs.cs5004.IReadFile</node>
+    <node x="594.0" y="464.0">edu.neu.ccs.cs5004.CustomerTest</node>
+    <node x="917.0" y="818.0">edu.neu.ccs.cs5004.ReadTextFileTest</node>
+    <node x="244.0" y="1026.0">edu.neu.ccs.cs5004.ProcessorTest</node>
+    <node x="333.0" y="0.0">edu.neu.ccs.cs5004.IWriteFile</node>
+    <node x="309.0" y="102.0">edu.neu.ccs.cs5004.WriteFile</node>
+    <node x="0.0" y="102.0">edu.neu.ccs.cs5004.Parser</node>
+    <node x="0.0" y="0.0">edu.neu.ccs.cs5004.IParser</node>
+    <node x="923.0" y="464.0">edu.neu.ccs.cs5004.WriteFileTest</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="edu.neu.ccs.cs5004.ReadCsvFile" target="edu.neu.ccs.cs5004.IReadFile">
+      <point x="0.0" y="-103.5" />
+      <point x="142.0" y="541.0" />
+      <point x="235.75" y="541.0" />
+      <point x="-48.5" y="26.0" />
+    </edge>
+    <edge source="edu.neu.ccs.cs5004.WriteFile" target="edu.neu.ccs.cs5004.IWriteFile">
+      <point x="0.0" y="-114.5" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="edu.neu.ccs.cs5004.ReadTextFile" target="edu.neu.ccs.cs5004.IReadFile">
+      <point x="0.0" y="-81.5" />
+      <point x="426.5" y="541.0" />
+      <point x="332.75" y="541.0" />
+      <point x="48.5" y="26.0" />
+    </edge>
+    <edge source="edu.neu.ccs.cs5004.Parser" target="edu.neu.ccs.cs5004.IParser">
+      <point x="0.0" y="-158.5" />
+      <point x="0.0" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8450980392156863" x="290.7679814385151" y="825.245939675174" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

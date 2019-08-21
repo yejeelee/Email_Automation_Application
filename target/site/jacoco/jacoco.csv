@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+CS5004 Assignment,edu.neu.ccs.cs5004,WriteFile,46,277,9,25,6,63,7,19,0,9
+CS5004 Assignment,edu.neu.ccs.cs5004,Processor,5,79,2,8,2,22,2,10,0,7
+CS5004 Assignment,edu.neu.ccs.cs5004,Parser,12,487,13,71,1,73,13,42,0,13
+CS5004 Assignment,edu.neu.ccs.cs5004,ReadTextFile,47,119,6,12,5,28,4,11,0,6
+CS5004 Assignment,edu.neu.ccs.cs5004,Automation,0,62,1,9,0,18,1,9,0,5
+CS5004 Assignment,edu.neu.ccs.cs5004,ReadCsvFile,47,260,8,26,5,50,6,19,0,8
+CS5004 Assignment,edu.neu.ccs.cs5004,Customer,2,48,1,7,1,14,1,9,0,6

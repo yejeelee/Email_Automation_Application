@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>ReadCsvFile.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CS5004 Assignment</a> &gt; <a href="index.source.html" class="el_package">edu.neu.ccs.cs5004</a> &gt; <span class="el_source">ReadCsvFile.java</span></div><h1>ReadCsvFile.java</h1><pre class="source lang-java linenums">package edu.neu.ccs.cs5004;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * This class represents a ReadCsvFile.
+ */
+public class ReadCsvFile implements IReadFile {
+
+  private List&lt;String&gt; header;
+  private List&lt;Customer&gt; customers;
+
+  /**
+   * Construct a new ReadCsvFile with given input.
+   *
+   * @param list list given to store information.
+   */
+<span class="fc" id="L28">  public ReadCsvFile(List&lt;Customer&gt; list) {</span>
+<span class="fc" id="L29">    this.header = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L30">    this.customers = list;</span>
+<span class="fc" id="L31">  }</span>
+
+  /**
+   * Gets header from this ReadCsvFile.
+   *
+   * @return list of attribute of csv from this ReadCsvFile.
+   */
+  public List&lt;String&gt; getHeader() {
+<span class="fc" id="L39">    return this.header;</span>
+  }
+
+  /**
+   * Gets the CustomerList from this ReadCsvFile.
+   * @return List of Customer from this ReadCsvFile.
+   */
+  public List&lt;Customer&gt; getCustomerList() {
+<span class="fc" id="L47">    return this.customers;</span>
+  }
+
+  /**
+   * Read given file to this ReadCsvFile.
+   * @param file file given to this ReadCsvFile.
+   */
+  @Override
+  public void readFile(String file) {
+<span class="fc" id="L56">    BufferedReader inputFile = null;</span>
+    try {
+<span class="fc" id="L58">      InputStream inputStream = new FileInputStream(file);</span>
+<span class="fc" id="L59">      Reader fileToRead = new InputStreamReader(inputStream, &quot;UTF-8&quot;);</span>
+<span class="fc" id="L60">      inputFile = new BufferedReader(fileToRead);</span>
+      String line;
+<span class="fc bfc" id="L62" title="All 2 branches covered.">      while ((line = inputFile.readLine()) != null) {</span>
+<span class="fc" id="L63">        String[] sentence = line.split(&quot;\&quot;,&quot;);</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        for (int i = 0; i &lt; sentence.length; i++) {</span>
+<span class="fc" id="L65">          sentence[i] = sentence[i].replace(&quot;\&quot;&quot;, &quot;&quot;);</span>
+        }
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        if (header.size() == 0) {</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">          for (String word : sentence) {</span>
+<span class="fc" id="L69">            header.add(word);</span>
+          }
+        } else {
+<span class="fc" id="L72">          addInfo(sentence);</span>
+        }
+<span class="fc" id="L74">      }</span>
+<span class="fc" id="L75">    } catch (FileNotFoundException fnfe) {</span>
+<span class="fc" id="L76">      System.out.println(&quot;*** OOPS! A file was not found : &quot; + fnfe.getMessage());</span>
+<span class="nc" id="L77">    } catch (IOException ioe) {</span>
+<span class="nc" id="L78">      System.out.println(&quot;Something went wrong! : &quot; + ioe.getMessage());</span>
+    } finally {
+<span class="pc bpc" id="L80" title="6 of 8 branches missed.">      if (inputFile != null) {</span>
+        try {
+<span class="pc" id="L82">          inputFile.close();</span>
+<span class="nc" id="L83">        } catch (IOException e) {</span>
+<span class="nc" id="L84">          System.out.println(&quot;Failed to close input stream&quot;);</span>
+<span class="pc" id="L85">        }</span>
+      }
+<span class="nc" id="L87">    }</span>
+<span class="fc" id="L88">  }</span>
+
+  /**
+   * Add information to store into a list of this ReadCsvFile.
+   *
+   * @param info info given to this ReadCsvFile.
+   */
+  private void addInfo(String[] info) {
+<span class="fc bfc" id="L96" title="All 2 branches covered.">    if (info.length == header.size()) {</span>
+<span class="fc" id="L97">      Map&lt;String, String&gt; customerInfo = new HashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">      for (int i = 0; i &lt; header.size(); i++) {</span>
+<span class="fc" id="L99">        customerInfo.put(header.get(i), info[i]);</span>
+      }
+<span class="fc" id="L101">      customers.add(new Customer(customerInfo));</span>
+    }
+<span class="fc" id="L103">  }</span>
+
+  /**
+   * Hashcode function for ReadCsvFile.
+   *
+   * @return hashcode integer based on the hashcode for the header and customers.
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L112">    return 31 * header.hashCode() * customers.hashCode();</span>
+
+  }
+
+  /**
+   * A string representation of the ReadCsvFile class.
+   *
+   * @return the string of customers read in from the CSV.
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L123">    StringBuffer buf = new StringBuffer();</span>
+<span class="fc" id="L124">    buf.append(&quot;Current customers: \n&quot;);</span>
+<span class="fc" id="L125">    int customerNum = 1;</span>
+<span class="fc bfc" id="L126" title="All 2 branches covered.">    for (Customer customer : customers) {</span>
+<span class="fc" id="L127">      buf.append(&quot;Customer &quot; + customerNum + &quot;\n&quot;);</span>
+<span class="fc bfc" id="L128" title="All 2 branches covered.">      for (String variable : header) {</span>
+<span class="fc" id="L129">        buf.append(variable + &quot;: &quot; + customer.findValueOfAttributes(variable) + &quot;\n&quot;);</span>
+<span class="fc" id="L130">      }</span>
+<span class="fc" id="L131">      customerNum++;</span>
+<span class="fc" id="L132">    }</span>
+<span class="fc" id="L133">    return buf.toString();</span>
+  }
+
+  /**
+   * Compares two objects and determines if they are equal.
+   *
+   * @param compare the object to be compared
+   * @return true if the object header and customer list are equal, false otherwise.
+   */
+
+  @Override
+  public boolean equals(Object compare) {
+<span class="fc bfc" id="L145" title="All 2 branches covered.">    if (this == compare) {</span>
+<span class="fc" id="L146">      return true;</span>
+    }
+<span class="pc bpc" id="L148" title="1 of 4 branches missed.">    if (compare == null || getClass() != compare.getClass()) {</span>
+<span class="fc" id="L149">      return false;</span>
+    }
+<span class="fc" id="L151">    ReadCsvFile object = (ReadCsvFile) compare;</span>
+<span class="fc bfc" id="L152" title="All 2 branches covered.">    return this.getHeader().equals(object.getHeader())</span>
+<span class="pc bpc" id="L153" title="1 of 2 branches missed.">        &amp;&amp; this.getCustomerList().equals(object.getCustomerList());</span>
+  }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
