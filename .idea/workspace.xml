@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="75e2b212-65d4-457b-bf39-ca2ef1e89c81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-result.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/findbugsXml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/findbugsXml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pmd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/pmd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/allclasses-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/Automation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/Automation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/Customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/Customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/IParser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/IParser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/IReadFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/IReadFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/IWriteFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/IWriteFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/Parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/Parser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/Processor.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/Processor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/ReadCsvFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/ReadCsvFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/ReadTextFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/ReadTextFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/WriteFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/WriteFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/Automation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/Automation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/Customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/Customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/IParser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/IParser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/IReadFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/IReadFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/IWriteFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/IWriteFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/Parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/Parser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/Processor.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/Processor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/ReadCsvFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/ReadCsvFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/ReadTextFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/ReadTextFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/WriteFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/class-use/WriteFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/package-frame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/edu/neu/ccs/cs5004/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/index-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/findbugs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/findbugs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/.sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/.sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/edu.neu.ccs.cs5004/WriteFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/edu.neu.ccs.cs5004/WriteFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/edu.neu.ccs.cs5004/WriteFile.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/edu.neu.ccs.cs5004/WriteFile.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/edu.neu.ccs.cs5004/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/edu.neu.ccs.cs5004/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/edu.neu.ccs.cs5004/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/edu.neu.ccs.cs5004/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/xref-test/edu/neu/ccs/cs5004/ReadCsvFileTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/xref-test/edu/neu/ccs/cs5004/ReadCsvFileTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/xref-test/edu/neu/ccs/cs5004/ReadTextFileTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/xref-test/edu/neu/ccs/cs5004/ReadTextFileTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.AutomationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.AutomationTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.CustomerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.CustomerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.ParserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.ParserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.ProcessorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.ProcessorTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.ReadCsvFileTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.ReadCsvFileTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.ReadTextFileTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.ReadTextFileTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.WriteFileTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-edu.neu.ccs.cs5004.WriteFileTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.AutomationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.AutomationTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.CustomerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.CustomerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.ParserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.ParserTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.ProcessorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.ProcessorTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.ReadCsvFileTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.ReadCsvFileTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.ReadTextFileTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.ReadTextFileTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.WriteFileTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/edu.neu.ccs.cs5004.WriteFileTest.txt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="CS5004 Assignment" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="36" />
+    <option name="y" value="37" />
+    <option name="width" value="1440" />
+    <option name="height" value="815" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="A9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Email-Automation-Application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="A9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Email-Automation-Application" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="A9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Email-Automation-Application" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566392604646" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75e2b212-65d4-457b-bf39-ca2ef1e89c81" name="Default Changelist" comment="" />
+      <created>1566392338757</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566392338757</updated>
+      <workItem from="1566392342889" duration="484000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="484000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="17" y="23" width="1440" height="815" extended-state="0" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32921812" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" visible="true" weight="0.3297568" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
